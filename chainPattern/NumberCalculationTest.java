@@ -12,8 +12,10 @@ public class NumberCalculationTest {
 		chainCalc2.setNextChain(chainCalc3);
 		chainCalc3.setNextChain(chainCalc4);
 		
-		Numbers request = new Numbers(4,2,"pow");
-		chainCalc1.calculate(request);
+		Numbers request = new Numbers(4,2,"add");
+		double number = chainCalc1.calculate(request);
+		
+		System.out.println(number);
 
 	}
 

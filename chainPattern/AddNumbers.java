@@ -11,13 +11,15 @@ public class AddNumbers implements Chain {
 	}
 
 	@Override
-	public void calculate(Numbers requests) {
+	public double calculate(Numbers requests) {
 		if(requests.getCalculationWanted() == "add") {
-			System.out.println((requests.getNumber1() + "+" + requests.getNumber2() + "=" + (requests.getNumber1() + requests.getNumber2())));
+			//System.out.println((requests.getNumber1() + "+" + requests.getNumber2() + "=" + (requests.getNumber1() + requests.getNumber2())));
+			return (requests.getNumber1() + requests.getNumber2());
 		}
 		else {
-			nextInChain.calculate(requests);
+			return nextInChain.calculate(requests);
 		}
+		//return 0;
 	}
 
 }

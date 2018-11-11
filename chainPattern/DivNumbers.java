@@ -11,12 +11,15 @@ public class DivNumbers implements Chain {
 	}
 
 	@Override
-	public void calculate(Numbers requests) {
+	public double calculate(Numbers requests) {
 		if(requests.getCalculationWanted() == "div") {
-			System.out.println((requests.getNumber1() + "/" + requests.getNumber2() + "=" + (requests.getNumber1() / requests.getNumber2())));
+			//System.out.println((requests.getNumber1() + "/" + requests.getNumber2() + "=" + (requests.getNumber1() / requests.getNumber2())));
+			return (requests.getNumber1() / requests.getNumber2());
 		}
 		else {
-			System.out.print("Only add, sub, multiply, div will be accepted");
+			//System.out.print("Only add, sub, multiply, div will be accepted");
+			
+			return -999999999;
 		}
 	}
 
