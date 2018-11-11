@@ -17,7 +17,8 @@ public class SubNumbers implements Chain {
 			return (requests.getNumber1() - requests.getNumber2());
 		}
 		else {
-			return nextInChain.calculate(requests);
+			double calculatedValue = nextInChain.calculate(requests);
+			return calculatedValue;
 		}
 		//return 0;
 	}
